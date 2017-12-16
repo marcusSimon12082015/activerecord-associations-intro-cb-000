@@ -34,7 +34,7 @@ describe 'Artist Associations' do
 
   it 'knows about its genres' do
     song = Song.create(title: "Super Hip Music")
-    genre = Genre.create(title: "Soul")
+    genre = Genre.create(name: "Soul")
     song.genre = genre
     song.save
     @prince.songs << song
