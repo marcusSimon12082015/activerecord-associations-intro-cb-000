@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 describe 'Song Associations' do
   before do
-    @song = Song.create(name: "Forever")
+    @song = Song.create(title: "Forever")
   end
 
   it 'has a genre' do
@@ -10,7 +10,7 @@ describe 'Song Associations' do
     @song.genre = genre
     @song.save
 
-    expect(Song.find_by(name: "Forever").genre).to eq(genre)
+    expect(Song.find_by(title: "Forever").genre).to eq(genre)
   end
 
   it 'can have an artist' do
